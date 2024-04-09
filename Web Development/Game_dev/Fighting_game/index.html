@@ -1,0 +1,128 @@
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+    rel="stylesheet"
+  />
+  <!-- always need this for every web page -->
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: "Press Start 2P", cursive;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- container div -->
+  <div style="position: relative; display: inline-block">
+    <!-- health bar menu -->
+    <div
+      style="
+        position: absolute;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        padding: 20px;
+      "
+    >
+      <!-- player1 health -->
+      <div
+        style="
+          position: relative;
+          width: 100%;
+          display: flex;
+          justify-content: flex-end;
+          border-top: 4px solid rgba(255, 255, 255);
+          border-left: 4px solid rgba(255, 255, 255);
+          border-bottom: 4px solid rgba(255, 255, 255);
+        "
+      >
+        <div
+          style="background-color: rgb(100, 0, 0); height: 30px; width: 100%"
+        ></div>
+        <div
+          id="player1Health"
+          style="
+            position: absolute;
+            background: #818cf8;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+          "
+        ></div>
+      </div>
+      <!-- timer -->
+      <!-- alight items is center vertically && justify-content is center horizontally -->
+      <div
+        id="timer"
+        style="
+          background-color: black;
+          width: 100px;
+          height: 50px;
+          flex-shrink: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #fff;
+          border: 4px solid rgba(255, 255, 255);
+        "
+      >
+        10
+      </div>
+      <!-- player2 health -->
+      <div
+        style="
+          position: relative;
+          width: 100%;
+          border-top: 4px solid rgba(255, 255, 255);
+          border-right: 4px solid rgba(255, 255, 255);
+          border-bottom: 4px solid rgba(255, 255, 255);
+        "
+      >
+        <div style="background-color: rgb(100, 0, 0); height: 30px"></div>
+        <div
+          id="player2Health"
+          style="
+            position: absolute;
+            background: #818cf8;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+          "
+        ></div>
+      </div>
+    </div>
+    <!-- Game Over Screen (Draw) -->
+    <div
+      id="displayText"
+      style="
+        position: absolute;
+        color: #fff;
+        align-items: center;
+        justify-content: center;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        display: none;
+      "
+    ></div>
+    <canvas></canvas>
+  </div>
+
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+    integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <script src="js/functions/collisionDetection.js"></script>
+  <script src="js/functions/determineWinner.js"></script>
+  <script src="js/functions/decreaseTimer.js"></script>
+  <script src="js/classes/classes.js"></script>
+  <script src="index.js"></script>
+</body>

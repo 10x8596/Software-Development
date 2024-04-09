@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="midterm">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/midterm.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
